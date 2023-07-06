@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+* {
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.left {
+  margin-left: 5px;
+}
+
+.right {
+  right: 5px;
+  text-align: right;
+}
+
+.popup__container {
+  min-width: 333px;
+  min-width: 177px;
+  background: rgb(197, 182, 239);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.dark {
+  color: rgba(37, 13, 13, 0.97);
+}
+
+p {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.button {
+  margin-top: 0.5rem;
+  background-color: whitesmoke;
+  position: relative;
+  height: 2rem;
+  width: 4.2rem;
+  border-radius: 1.5rem;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.half {
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: grey;
+  pointer-events: none;
+  transition: 1s;
+}
+
+@keyframes SwitchToDark {
+  0% {
+    background-color: whitesmoke;
+  }
+
+  100% {
+    background-color: grey;
+  }
+}
+
+@keyframes SwitchToLight {
+  0% {
+    background-color: grey;
+  }
+
+  100% {
+    background-color: grey;
+  }
+}
+
+@keyframes toggleCircleRight {
+  0% {
+    left: 0;
+    transform: translateX(0);
+    background-color: grey;
+  }
+
+  100% {
+    left: 100%;
+    transform: translateX(-100%);
+    background-color: grey;
+  }
+}
+
+@keyframes toggleCircleLeft {
+  0% {
+    left: 100%;
+    transform: translateX(-100%);
+    background-color: grey;
+  }
+
+  100% {
+    left: 0;
+    transform: translateX(0);
+    background-color: grey;
+  }
+}
